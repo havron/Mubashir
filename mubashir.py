@@ -7,7 +7,7 @@ TARGET = "https://reddit.com/r/UpliftingNews/hot.json?limit=%d" % num_stories
 
 # get the data and load into JSON
 req = urllib.request.Request(TARGET, method='GET')
-req.add_header('User-Agent', 'installed app:T9CS8svlPtNOlw:0.1 (by /u/samhavron)')
+req.add_header('User-Agent', 'web app:T9CS8svlPtNOlw:0.1 (by /u/samhavron)')
 resp_json = urllib.request.urlopen(req).read().decode('utf-8')
 resp = json.loads(resp_json)
 
