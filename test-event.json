@@ -1,0 +1,24 @@
+{
+  "session": {
+    "sessionId": "SessionId.77b53106-c092-4f2f-90f8-bc99067f3e96",
+    "application": {
+      "applicationId": "amzn1.ask.skill.73ffab01-a6bc-4fc1-bdbb-c1a7c2e68fd0"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AGPUPNYJ6J7BL3W4YEGGEKM6L7RTTH5H3MZEYMPW2LKAO4XRLRE74EBXPHHIVCYBAGRWRHTAU3EGZ7ZB6JGMDD26XQEERY737B6X7TFBYJPDRGNMSTQCCACVOAQUQ62JDMAKMYF645IF6OZYELO5HEW2RKJ3TSV2MKNUYLGJV4HFFAVGKMFU3D6GEXA3V5UAIW3FWKXG2SRJTJY"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.9ca9d427-742c-4de5-9af8-3f21eadd2b56",
+    "locale": "en-US",
+    "timestamp": "2017-05-18T20:14:39Z",
+    "intent": {
+      "name": "GetGoodNews",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}

@@ -1,5 +1,6 @@
 import json
-import urllib.request
+from urllib2 import Request
+import urllib2
 
 def lambda_handler(event, context):
     if (event["session"]["application"]["applicationId"] !=
@@ -21,7 +22,7 @@ def get_welcome_response():
     card_title = "Mubashir Good News"
     speech_output = "Welcome to the Alexa Mubashir Good News skill. " \
                     "You can ask me for recent uplifting news, or " \
-                    "ask me for other features that I haven't implemented yet! "\
+                    "ask me for other features that I haven't implemented yet! "
     reprompt_text = "Please ask me for good news, " \
                     "for example tell me good news."
     should_end_session = False
@@ -63,9 +64,9 @@ def get_good_news(intent):
     # also top.json, new.json available
 
     # get the data and load into JSON
-    req = urllib.request.Request(TARGET, method='GET')
+    req = urllib2.Request(TARGET)
     req.add_header('User-Agent', 'web app:T9CS8svlPtNOlw:0.1 (by /u/samhavron)')
-    resp_json = urllib.request.urlopen(req).read().decode('utf-8')
+    resp_json = urllib2.urlopen(req).read().decode('utf-8')
     resp = json.loads(resp_json)
 
     tmp = ''
@@ -73,7 +74,7 @@ def get_good_news(intent):
       print("Error retrieving uplifting news from '%s' on Reddit\n" % TARGET)
     else:
       for i in range(num_stories):
-	tmp += "Hot story #%d:\n" % (i+1) + resp["data"]["children"][i]["data"]["title"]) 
+	tmp += "Story #%d from Mubashir:\n" % (i+1) + resp["data"]["children"][i]["data"]["title"]+'.\n' # gets third one only
 
     speech_output = tmp
 
