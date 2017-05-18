@@ -4,10 +4,10 @@ MSG=updated on `date`
 DELIVER=deploy.zip
 
 dev:
-	./dev.sh
+	scripts/dev.sh
 	# use emulambda here, ideally
 deploy: # should upload to S3 bucket to link to on AWS Lambda (update link to source code)
-	./deploy.sh	$(DELIVER)
+	scripts/deploy.sh	$(DELIVER)
 
 github: clean
 	git add -A
@@ -15,7 +15,7 @@ github: clean
 	git push
 
 install: # makes the pyenvs and fills them up with libs. run once.
-	./install.sh 
+	scripts/install.sh 
 
 clean:
 	rm -rf $(DELIVER) mubashir.pyc
