@@ -1,0 +1,10 @@
+GetGoodNews Tell me some good news
+GetGoodNews For good news
+GetGoodNews Give me good news
+GetGoodNews I want to hear good things
+GetGoodNews What is good today
+GetGoodNews Tell me happy things
+GetGoodNews I want to be happy
+GetGoodNews Uplift me
+GetGoodNews Say something uplifting
+GetGoodNews Is the world going to end
